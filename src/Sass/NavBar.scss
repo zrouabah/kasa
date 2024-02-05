@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+.NavBar {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    max-width: 100%;
+    gap: 1rem;
+    padding: 1rem;   
+    @media screen and (width <= 768px){
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    
+    & > *:first-child {
+        margin-right: auto;
+    }  
+
+    & a {
+        text-decoration: none;
+        @include color_black;
+
+        &.active,  &:hover {
+            text-decoration: underline;
+        }
+        
+    
+    }
+}
+
+
+
+
+    

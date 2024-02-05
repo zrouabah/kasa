@@ -1,0 +1,10 @@
+@import "../Sass/variables.scss";
+.footer{
+    @include color_footer_balck;
+    color: white;
+    text-align: center;
+    min-height: 200px;
+    display: grid;
+    place-items: center;
+    min-height: 100px;
+}

@@ -1,0 +1,37 @@
+@import "../Sass/variables.scss";
+
+.description_section{
+    margin-bottom: 1rem;
+    flex-basis: 50%;
+    p{
+        margin-block: 0;
+    }
+    .description_header{
+        @include background_color_main;
+        @include color_withe;
+        padding: 0.2em 1em;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i{
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+   
+    .description_content{
+        @include color_black;
+        font-weight:400;
+        @include color_gray;
+        padding: 1rem;
+        border-radius: 0 0 1rem 1rem;
+        position: relative;
+        top:-0.3rem;
+        z-index: -1;
+        height: 100px; /* Ajoutez cette ligne pour définir la hauteur fixe */
+        overflow-y: auto;
+    }
+    
+   
+}

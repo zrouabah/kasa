@@ -1,0 +1,11 @@
+@import "../Sass/variables.scss";
+
+
+
+.appartement_description_flex{
+    display: flex;
+    gap:1rem;
+    @media screen and (width <= 768px){
+        flex-direction: column;
+    }
+}  

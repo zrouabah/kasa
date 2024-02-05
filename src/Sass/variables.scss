@@ -1,0 +1,30 @@
+
+@mixin linear_Gradient{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, 
+    rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);}
+    
+@mixin background_color_main{
+    background-color: #ff6060}
+
+@mixin color_withe{
+    color: white}
+
+@mixin color_main{
+        color: #ff6060}
+
+@mixin color_footer_balck{
+    background-color: black}
+
+@mixin color_black{
+    color: black;
+}
+@mixin color_gray{
+    background-color: #F6F6F6;
+}
+
+@mixin color_badge{
+    background-color: #C4C4C4;
+}
+@mixin color_starts{
+    color: #E3E3E3;
+}
