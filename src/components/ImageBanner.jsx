@@ -10,12 +10,13 @@ function AppartementBanner(props) {
     return i === currentPicture ? "show" : "";
   };
 
-  const moveToNext = () => {
-    setCurrentPicture((currentPicture + 1) % pictures.length);
+  const moveToNext = () => { 
+    setCurrentPicture((currentPicture - 1 + pictures.length) % pictures.length);
+    
   };
 
   const moveToPrevious = () => {
-    setCurrentPicture((currentPicture - 1 + pictures.length) % pictures.length);
+   setCurrentPicture((currentPicture + 1) % pictures.length);
   };
 
   if (!pictures) {
@@ -41,6 +42,9 @@ function AppartementBanner(props) {
         <button className="btn btn_next" onClick={moveToNext}>
           <i className="fa-solid fa-chevron-left"></i>
         </button>
+        <span className="current_slide">
+          {currentPicture + 1}/{pictures.length}
+        </span>
         <button className="btn btn_previous" onClick={moveToPrevious}>
           <i className="fa-solid fa-chevron-right"></i>
         </button>

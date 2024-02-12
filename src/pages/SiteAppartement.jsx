@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,  } from 'react';
 import "./SiteAppartement.scss";
 import DescriptionSection from '../components/DescriptionSection.jsx';
 import ImageBanner from '../components/ImageBanner.jsx';

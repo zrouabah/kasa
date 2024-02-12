@@ -50,4 +50,12 @@
       }
     }
   }
+ 
 }
+.current_slide{
+    @include color_withe;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 1rem;
+  }

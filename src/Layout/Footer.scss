@@ -7,4 +7,15 @@
     display: grid;
     place-items: center;
     min-height: 100px;
-}
+    line-height: 0;
+    padding: 20px 0;
+    .footer_text {
+        display: flex;
+        @media screen and (width <= 768px) {
+            display: flex;
+            flex-direction: column;
+           
+      }
+    } 
+   
+  }
