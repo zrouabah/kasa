@@ -5,7 +5,10 @@ import '../Layout/Banner.scss';
 function Banner() {
 return(
         <div className='banner'> 
-        <h1>Chez vous, partout et ailleurs</h1>
+        <div className='bannerTextContainer'>
+          <p>Chez vous, </p>
+          <p>partout et ailleurs</p>
+        </div>
         </div>
          );
   }

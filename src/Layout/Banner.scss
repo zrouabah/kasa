@@ -1,18 +1,40 @@
 @import "../Sass/variables.scss";
 
-.banner{
-    width: 100%;
-    padding-inline: 2rem;
-    min-height: 140px;
-    background-image: url('../../public/image1.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%; /* Spécifiez la largeur en pourcentage ou en pixels selon vos besoins */
-    background-position: center;
-    margin: auto;
-    border-radius: 25px;
-    display: grid;
-    place-items: center;
-    @include color_withe;
-    padding: 0;
-    margin-bottom: 2rem;
+.banner {
+  width: 100%;
+  padding-inline: 2rem;
+  min-height: 145px;
+  background-image: url('../../public/image1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin: auto;
+  border-radius: 25px;
+  padding: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+
+  .bannerTextContainer {
+    display: flex;
+    color: white;
+    font-size: 35px;
+
+    @media screen and (max-width: 599px) {
+      font-size: 25px;
+      flex-direction: column;
+      text-align: left;
+      margin-left: 16px;
+    }
+
+    @media screen and (min-width: 600px) {
+      justify-content: center;  // Centrer le texte en mode desktop
+      width: 100%;  
+    }
+
+    p {
+      margin: 0;
+      margin-left: 16px;
+    }
+  }
 }

@@ -11,6 +11,9 @@
     @media screen and (width <= 768px){
         text-transform: uppercase;
         font-weight: 400;
+        a{
+            font-size: 11px;
+        }
     }
     
     & > *:first-child {
