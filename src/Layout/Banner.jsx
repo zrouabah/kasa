@@ -7,7 +7,7 @@ return(
         <div className='banner'> 
         <div className='bannerTextContainer'>
           <p>Chez vous, </p>
-          <p>partout et ailleurs</p>
+          <p> partout et ailleurs</p>
         </div>
         </div>
          );
