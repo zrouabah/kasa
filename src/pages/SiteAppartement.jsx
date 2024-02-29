@@ -1,26 +1,28 @@
-import React, { useEffect, useState,  } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import "./SiteAppartement.scss";
 import DescriptionSection from '../components/DescriptionSection.jsx';
 import ImageBanner from '../components/ImageBanner.jsx';
 import AppartementHeader from '../components/AppartementHeader.jsx';
-import {useParams} from 'react-router-dom';
-import logements from "../logements.json"
+import logements from "../logements.json";
 
 function SiteAppartement() {
-  const [flat, setflat] = useState({});
-  const {id}= useParams();
- console.log(logements)
+  const [flat, setFlat] = useState({});
+  const { id } = useParams();
+  const navigate = useNavigate();
+
   useEffect(() => {
     fetchAppartementData();
   },);
 
   function fetchAppartementData() {
-  
-        // Utilisez find avec une fonction de filtrage
-    
-        const flat = logements.find(flat => id === flat.id);
-        setflat(flat);
-     
+    const flat = logements.find((flat) => id === flat.id);
+
+    if (!flat) {
+      navigate('/error');
+    }
+
+    setFlat(flat);
   }
 
   return (
