@@ -10,17 +10,16 @@ function AppartementBanner(props) {
     return i === currentPicture ? "show" : "";
   };
 
-  const moveToNext = () => { 
+  const moveToNext = () => {
     setCurrentPicture((currentPicture - 1 + pictures.length) % pictures.length);
-    
   };
 
   const moveToPrevious = () => {
-   setCurrentPicture((currentPicture + 1) % pictures.length);
+    setCurrentPicture((currentPicture + 1) % pictures.length);
   };
 
-  if (!pictures) {
-    // Si pictures est absent, affiche myImage et cache les boutons
+  if (!pictures || pictures.length === 0) {
+    // Si pictures est absent ou vide, affiche myImage sans boutons
     return (
       <div className="image_banner">
         <div className="image_container">
@@ -30,7 +29,7 @@ function AppartementBanner(props) {
     );
   }
 
-  // Si pictures est présent, affiche le carrousel avec les boutons
+  // Si pictures est présent et contient plus d'une image, affiche le carrousel avec les boutons
   return (
     <div className="image_banner">
       <div className="image_container">
@@ -38,17 +37,19 @@ function AppartementBanner(props) {
           <img key={pic} src={pic} alt="" className={getClassName(i)} />
         ))}
       </div>
-      <div>
-        <button className="btn btn_next" onClick={moveToNext}>
-          <i className="fa-solid fa-chevron-left"></i>
-        </button>
-        <span className="current_slide">
-          {currentPicture + 1}/{pictures.length}
-        </span>
-        <button className="btn btn_previous" onClick={moveToPrevious}>
-          <i className="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
+      {pictures.length > 1 && ( // Affiche les boutons seulement s'il y a plus d'une image
+        <div>
+          <button className="btn btn_next" onClick={moveToNext}>
+            <i className="fa-solid fa-chevron-left"></i>
+          </button>
+          <span className="current_slide">
+            {currentPicture + 1}/{pictures.length}
+          </span>
+          <button className="btn btn_previous" onClick={moveToPrevious}>
+            <i className="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      )}
     </div>
   );
 }
